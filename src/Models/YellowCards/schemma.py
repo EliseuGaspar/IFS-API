@@ -15,7 +15,7 @@ class yellowcard():
             name = name.replace(' ','-')
             return name
     
-    def __Soup__(self, time : str, epoca : str) -> list:
+    def __Soup__(self, time : str) -> list:
 
         yellowcards = list_temporadas = list_yellowcards = list_ = []
 
@@ -41,9 +41,9 @@ class yellowcard():
         else:
             return "Não foi possível achar resultados para a sua pesquisa"
 
-    def Scraping(self, time : str, epoca : str) -> dict:
+    def Scraping(self, time : str) -> dict:
         self.__init__()
-        return self.__Soup__(time,epoca)
+        return self.__Soup__(time)
 
 
 
