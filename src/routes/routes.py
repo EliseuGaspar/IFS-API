@@ -24,31 +24,19 @@ def EndPointEquipes():
 
 @app.route('/info-clube/red-card/<string:name_team>/', methods=['GET'])
 def EndPointInfoRedCard(name_team):
-	return jsonify({f"{name_team}":redcard().Scraping(
-			name_team,
-			temporada
-		)})
+	return jsonify({f"{name_team}":redcard().Scraping(name_team)})
 
 @app.route('/info-clube/yellow-card/<string:name_team>/', methods=['GET'])
 def EndPointInfoYellowCard(name_team):
-	return jsonify({f"{name_team}":yellowcard().Scraping(
-			name_team,
-			temporada
-		)})
+	return jsonify({f"{name_team}":yellowcard().Scraping(name_team)})
 
 @app.route('/info-clube/gols/<string:name_team>/', methods=['GET'])
 def EndPointInfoGols(name_team):
-	return jsonify({f"{name_team}":gols().Scraping(
-			name_team,
-			temporada
-		)})
+	return jsonify({f"{name_team}":gols().Scraping(name_team)})
 
 @app.route('/info-clube/partidas/<string:name_team>/', methods=['GET'])
 def EndPointInfoPartidas(name_team):
-	return jsonify({f"{name_team}":partidas().Scraping(
-			name_team,
-			temporada
-		)})
+	return jsonify({f"{name_team}":partidas().Scraping(name_team)})
 
 @app.route('/info-clube/<string:name_team>/',methods=['GET'])
 def EndPointFullInfo(name_team):
